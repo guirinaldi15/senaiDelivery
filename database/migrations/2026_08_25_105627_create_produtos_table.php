@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('nome', 60)->nullable(false);
             $table->text('descricao')->nullable(false);
             $table->decimal('preco', 10, 2)->nullable(false);
-            $table->string('caminho_imagem')->nullable(false);
+            $table->string('caminho_imagem')->nullable();
             $table->boolean('ativo')->default(true);
             $table->boolean('destaque')->default(false);
             $table->foreign('categoria_id')->references('id')->on('categorias');
